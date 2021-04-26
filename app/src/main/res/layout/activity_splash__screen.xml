@@ -7,27 +7,32 @@
     android:background="@drawable/images"
     tools:context=".main.Splash_Screen">
 
-    <ImageView
-        android:id="@+id/imgCar"
-        android:layout_width="340dp"
-        android:layout_height="376dp"
-        android:layout_centerInParent="true"
-        android:contentDescription="@string/text1"
-        android:src="@drawable/car"
-        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/imgCar"
+            android:layout_width="340dp"
+            android:layout_height="376dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/text1"
+            android:src="@drawable/car" />
 
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-               android:textAlignment="center"
-               android:layout_marginLeft="80dp"
-                android:layout_marginTop="150dp"
-                android:text="@string/text1"
-                android:textColor="#ffffff"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text1"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
 
 </RelativeLayout>

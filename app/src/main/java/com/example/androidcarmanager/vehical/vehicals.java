@@ -136,7 +136,7 @@ public class vehicals extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
                 progressDialog.dismiss();
                 Toast.makeText(vehicals.this,"Failed to Fetch Data try again",Toast.LENGTH_SHORT);
-                Log.d("snapshot:", "snapshot does not exist");
+
             }
         });
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -170,7 +170,7 @@ public class vehicals extends AppCompatActivity {
                                                 }
                                             }).show();
                                 } catch (Exception e) {
-                                    Log.d("Notifications: ", e.getMessage());
+
                                 }
                             }break;
                             case 1:{

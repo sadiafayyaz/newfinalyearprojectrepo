@@ -33,11 +33,6 @@ public class View_Expences_Screen extends AppCompatActivity  {
     String vehicleId;
     private FirebaseAuth firebaseAuth;
 
-//    BarChart barChart;
-//    BarData barData;
-//    BarDataSet barDataSet;
-//    ArrayList barEntries;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +49,7 @@ public class View_Expences_Screen extends AppCompatActivity  {
         btnsearch =(ImageButton)findViewById(R.id.searchIcon);
         firebaseAuth = FirebaseAuth.getInstance();
 
-       btnsearch .setOnClickListener(new View.OnClickListener() {
+        btnsearch .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(View_Expences_Screen.this, Search_Screen.class);
@@ -70,79 +65,26 @@ public class View_Expences_Screen extends AppCompatActivity  {
                 .getString("key", "-1");
 
 
-       PagerAdapter pagerAdapter =new pagerAdaptwe(getSupportFragmentManager(),
-               tabLayout.getTabCount());
-                viewPager.setAdapter(pagerAdapter);
+        PagerAdapter pagerAdapter =new pagerAdaptwe(getSupportFragmentManager(),
+                tabLayout.getTabCount());
+        viewPager.setAdapter(pagerAdapter);
 
-                tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-                    @Override
-                    public void onTabSelected(TabLayout.Tab tab) {
-                        viewPager.setCurrentItem( tab.getPosition());
-                    }
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem( tab.getPosition());
+            }
 
-                    @Override
-                    public void onTabUnselected(TabLayout.Tab tab) {
-                        viewPager.setCurrentItem( tab.getPosition());
-                    }
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem( tab.getPosition());
+            }
 
-                    @Override
-                    public void onTabReselected(TabLayout.Tab tab) {
-                        viewPager.setCurrentItem( tab.getPosition());
-                    }
-                });
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem( tab.getPosition());
+            }
+        });
 
-//        barChart = findViewById(R.id.mychart);
-//        getEntries();
-//        barDataSet = new BarDataSet(barEntries, "Expenses");
-//        barData = new BarData(barDataSet);
-//        barChart.setData(barData);
-//        barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
-//        barDataSet.setValueTextColor(Color.BLUE);
-//        barDataSet.setValueTextSize(12);
-
-
-
-
-
-
-
-
-
-
-
-//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-//            @Override
-//            public void onTabSelected(TabLayout.Tab tab) {
-//
-//            }
-//
-//            @Override
-//            public void onTabUnselected(TabLayout.Tab tab) {
-//
-//            }
-//
-//            @Override
-//            public void onTabReselected(TabLayout.Tab tab) {
-//
-//            }
-//        });
-//    }
-
-
-//    private void getEntries() {
-//        barEntries = new ArrayList<>();
-//        barEntries.add(new BarEntry(1, 2));
-//        barEntries.add(new BarEntry(2, 4));
-//        barEntries.add(new BarEntry(3f, 3));
-//        barEntries.add(new BarEntry(4f, 3));
-//        barEntries.add(new BarEntry(5f, 1));
-//        barEntries.add(new BarEntry(6f, 5));
-//        barEntries.add(new BarEntry(7f, 2));
-//        barEntries.add(new BarEntry(8f, 3));
-//        barEntries.add(new BarEntry(9f, 3));
-//        barEntries.add(new BarEntry(10f, 1));
-//        barEntries.add(new BarEntry(11f, 5));
-//        barEntries.add(new BarEntry(12f, 2));
-//    }
     }
 }
